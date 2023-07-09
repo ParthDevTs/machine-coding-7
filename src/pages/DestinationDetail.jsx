@@ -8,7 +8,7 @@ function DestinationDetail() {
     const navigate = useNavigate()
 
     const selectedContinent = tripData.find((continent) => continent.id === parseInt(continentId))
-    const selectedCountry = selectedContinent.countries?.find(country => country.id = parseInt(countryId))
+    const selectedCountry = selectedContinent.countries?.find(country => country.id === parseInt(countryId))
     const selectedDestination = selectedCountry.destinations.find(destination => destination.id === parseInt(destinationId))
 
     console.info(continentId, countryId, destinationId)

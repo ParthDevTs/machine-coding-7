@@ -8,9 +8,13 @@ function CountryDetailPage() {
     const navigate = useNavigate()
 
 
-    const selectedContinent = tripData.find((continent) => continent.id === parseInt(continentId))
-    const selectedCountry = selectedContinent.countries?.find(country => country.id = parseInt(countryId))
+    console.log(continentId, countryId)
 
+
+    const selectedContinent = tripData.find((continent) => continent.id === parseInt(continentId))
+    const selectedCountry = selectedContinent.countries.find(country => country.id === parseInt(countryId))
+    console.log(selectedCountry, "country")
+    console.log(selectedContinent, "continent")
     return (
         <div className="bg-slate-800 text-white min-h-screen w-full flex flex-col gap-4 items-center justify-center relative">
             <button className="absolute top-10 left-5 bg-white shadow-lg shadow-white text-black px-4 py-2 rounded capitalize" onClick={() => navigate(-1)}>go back</button>
